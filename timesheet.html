@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Tube Schedule</title>
+    <title>Timesheet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
@@ -24,6 +24,7 @@
                     
                     <div id='tableWrapper'>
                             <table class="table table-bordered">
+                                Current Employees
                                     <thead>
                                       <tr>
                                         <th scope="col">employee name</th>
@@ -36,25 +37,26 @@
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <th scope="row">1</th>
-                                        <td id="plantName-table"></td>
+                                        <th scope="row"></th>
+                                        <td id="name-table"></td>
                                         <td id="nextWatering-table"></td>
                                         <td id="lastWatering-table"></td>
                                         <td id="salary-table"></td>
+                                        <td id="BTD-table"></td>
                                       </tr>
                                      
                                     </tbody>
                                   </table>
                         
                     </div>
-                    <h2 class="card-text">Plant Info</h2>
+                    <h2 class="card-text">Add Employee</h2>
                     
                     <form>
                         
                         <div class="form-group">
                             
                             <label for="name">Employee Name</label>
-                            <input id="name" type="text" class="form-control" >
+                            <input id="name-input" type="text" class="form-control" >
                         </div>
                         
                         <div class="form-group">
@@ -74,10 +76,7 @@
                             <input type="text" id="salary-input" class="form-control">
                         </div>
 
-                        <div class="form-group">
-                            <label id="months" for="months">months</label>
-                            <input type="text" id="months-input" class="form-control">
-                        </div>
+                        
                       
                 
                         <button id="addBtn" type="submit" class="btn btn-success">Add  Employee</button>
@@ -91,7 +90,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script> 
     
-    
+    $("#addBtn").on('click', function(event){
+        let name = $("#name-input").val().trim();
+        let role = $("#role-input").val().trim()
+        let sdate = $("#start-date-input").val().trim()
+        let sal = $("#salary-input").val().trim()
+
+        
+
+
+
+      
+
+    })
     
     
     </script>
